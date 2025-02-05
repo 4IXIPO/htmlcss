@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: url('background.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    margin-bottom: 40px;
+}
+
+header .header-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+header .header-content p {
+    font-size: 1.5em;
+    margin-top: 20px; 
+}
+
+.header-buttons {
+    margin-top: 20px; 
+}
+
+.header-buttons .btn {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    width: auto; 
+    box-sizing: content-box; 
+}
+
+
+.primary-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #2980b9;
+}
+
+.secondary-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #27ae60;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #ecf0f1;
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.feature-item h2 {
+    font-size: 2.5em;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.search-form {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.search-form input {
+    padding: 12px;
+    width: 60%;
+    max-width: 400px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px; /* Added space below the input field */
+}
+
+.search-form button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Added space above the button */
+}
+
+.search-form button:hover {
+    background-color: #2980b9;
+}
+
+#search-result {
+    font-size: 1.3em;
+    color: #2ecc71;
+    margin-top: 20px;
+}
+
+.registration-form {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form input,
+.registration-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.registration-form button:hover {
+    background-color: #2980b9;
+}
+
+.rickroll-btn {
+    background-color: #e74c3c; 
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px; 
+}
+
+.rickroll-btn:hover {
+    background-color: #c0392b; 
+}
+
+.registration {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.registration h2 {
+    font-size: 2.5em;
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+.registration-form select,
+.registration-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.registration-form button:hover {
+    background-color: #2980b9;
+}
+
+#price-info {
+    font-size: 1.2em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.secondary-btn {
+    background-color: #2ecc71; 
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%; 
+    text-align: center;
+    margin-bottom: 20px; /* Added spacing below the button */
+}
+
+.secondary-btn:hover {
+    background-color: #27ae60;
+}
+
+.secondary-btn:active {
+    background-color: #1e8449;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}

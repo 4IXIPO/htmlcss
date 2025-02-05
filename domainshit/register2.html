@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Domain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Register Your Domain</h1>
+            <p>Choose a domain name, extension, and registration duration.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="registration">
+            <h2>Register Your Domain</h2>
+            <div class="registration-form">
+                <label for="domain-name">Domain Name:</label>
+                <input type="text" id="domain-name" placeholder="Enter domain name" />
+
+                <label for="extension">Choose Extension:</label>
+                <select id="extension">
+                    <option value=".com">.com</option>
+                    <option value=".ee">.ee</option>
+                    <option value=".ru">.ru</option>
+                    <option value=".org">.org</option>
+                </select>
+
+                <label for="duration">Choose Duration (in years):</label>
+                <select id="duration">
+                    <option value="1">1 Year</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="5">5 Years</option>
+                </select>
+
+                <p id="price-info">Price: $0</p>
+
+                <button id="calculate-price" onclick="calculatePrice()">Calculate Price</button>
+
+                <button class="primary-btn">Register Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TA-23B class work | All Rights Are Not Reserved</p>
+    </footer>
+
+    <script>
+        function calculatePrice() {
+            const domainName = document.getElementById("domain-name").value;
+            const extension = document.getElementById("extension").value;
+            const duration = parseInt(document.getElementById("duration").value);
+            
+            if (!domainName || domainName.trim() === "") {
+                alert("Please enter a domain name!");
+                return;
+            }
+            
+            let basePrice = 10; 
+            
+            switch(extension) {
+                case '.com':
+                    basePrice = 15;
+                    break;
+                case '.ee':
+                    basePrice = 12;
+                    break;
+                case '.ru':
+                    basePrice = 10;
+                    break;
+                case '.org':
+                    basePrice = 13;
+                    break;
+                default:
+                    basePrice = 10;
+            }
+            
+            const totalPrice = basePrice * duration;
+            document.getElementById("price-info").textContent = `Price: $${totalPrice}`;
+        }
+    </script>
+</body>
+</html>
