@@ -44,9 +44,7 @@
         function searchDomain() {
             const domainName = document.getElementById('domain-name').value.trim();
             if (domainName) {
-                // Store domain name in localStorage
                 localStorage.setItem('domainName', domainName);
-                // Redirect to registration page
                 window.location.href = 'register.html';
             } else {
                 alert("Please enter a valid domain name.");
