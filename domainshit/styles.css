@@ -31,6 +31,38 @@ header .header-content p {
     margin-top: 20px; 
 }
 
+.steps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: -40px; 
+}
+
+.step {
+    font-size: 1.2em;
+    margin: 0 15px;
+    padding: 8px 15px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.step.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.step:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+.step:active {
+    background-color: #2980b9;
+}
+
 .header-buttons {
     margin-top: 20px; 
 }
@@ -45,7 +77,6 @@ header .header-content p {
     width: auto; 
     box-sizing: content-box; 
 }
-
 
 .primary-btn {
     background-color: #3498db;
@@ -63,6 +94,20 @@ header .header-content p {
 
 .secondary-btn:hover {
     background-color: #27ae60;
+}
+
+.rickroll-btn {
+    background-color: #e74c3c;
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.rickroll-btn:hover {
+    background-color: #c0392b;
 }
 
 .features {
@@ -103,148 +148,216 @@ header .header-content p {
     margin-right: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-bottom: 20px; /* Added space below the input field */
+    margin-bottom: 20px;
 }
 
 .search-form button {
-    padding: 12px 20px;
+    padding: 14px 30px;
     background-color: #3498db;
     color: white;
-    border: none;
     border-radius: 5px;
-    margin-top: 10px; /* Added space above the button */
+    border: none;
 }
 
 .search-form button:hover {
     background-color: #2980b9;
 }
 
-#search-result {
-    font-size: 1.3em;
-    color: #2ecc71;
-    margin-top: 20px;
+body, h1, h2, p, label, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-.registration-form {
-    max-width: 700px;
-    margin: 40px auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.registration-form input,
-.registration-form select {
-    width: 100%;
-    padding: 12px;
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
-.registration-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #3498db;
+.step {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px; 
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.step.active {
+    background-color: #4CAF50;
     color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
 }
 
-.registration-form button:hover {
-    background-color: #2980b9;
-}
-
-.rickroll-btn {
-    background-color: #e74c3c; 
+.step.completed {
+    background-color: #2196F3;
     color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px; 
 }
 
-.rickroll-btn:hover {
-    background-color: #c0392b; 
-}
-
-.registration {
+.step-text-container {
     text-align: center;
-    margin: 40px auto;
+    margin-top: 10px;
 }
 
-.registration h2 {
-    font-size: 2.5em;
-    color: #2980b9;
-    margin-bottom: 20px;
-}
-
-.registration-form label {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.step-text-container .step {
+    margin: 0;
     display: block;
+}
+
+.step-text-container span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
     color: #333;
 }
 
-.registration-form select,
-.registration-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.registration-form, .domain-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.registration-form button {
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
     width: 100%;
-    padding: 12px;
-    background-color: #3498db;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
-    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.registration-form, .domain-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+main {
+    padding: 20px;
+}
+
+.registration-form,
+.registration-complete {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.registration-form label {
+    font-size: 1.1em;
+    margin: 10px 0 5px;
+    display: block;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.registration-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .registration-form button:hover {
-    background-color: #2980b9;
+    background-color: #45a049;
 }
 
-#price-info {
-    font-size: 1.2em;
-    color: #e74c3c;
-    margin-bottom: 20px;
+.registration-complete input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.secondary-btn {
-    background-color: #2ecc71; 
+.registration-complete button {
+    background-color: #2196F3;
     color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-    width: 100%; 
-    text-align: center;
-    margin-bottom: 20px; /* Added spacing below the button */
+    border: none;
+    cursor: pointer;
 }
 
-.secondary-btn:hover {
-    background-color: #27ae60;
+.registration-complete button:hover {
+    background-color: #1e88e5;
 }
 
-.secondary-btn:active {
-    background-color: #1e8449;
-}
-
+/* Footer Styling */
 footer {
-    text-align: center;
-    padding: 20px;
     background-color: #333;
     color: white;
-    margin-top: 40px;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
