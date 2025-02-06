@@ -1,43 +1,57 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Search Domain</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <div class="header-content">
-                <h1>Search for Your Domain</h1>
-                <p>Find the perfect domain name for your website</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Domain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="steps">
+                <div class="step completed">
+                    <span>1</span>
+                </div>
+                <div class="step active">
+                    <span>2</span>
+                </div>
+                <div class="step">
+                    <span>3</span>
+                </div>
             </div>
-        </header>
+            <h1>Choose Your Domain</h1>
+            <p>Select a domain name and check its availability.</p>
+        </div>
+    </header>
 
-        <main>
-            <section class="search-form">
-                <input type="text" id="domain-name" placeholder="Enter domain name">
-                <button onclick="searchDomain()" class="btn primary-btn">Search</button>
-            </section>
+    <main>
+        <section class="domain-form">
+            <form id="domain-form">
+                <label for="domain-name">Domain Name</label>
+                <input type="text" id="domain-name" placeholder="Enter domain name" required>
 
-            <section id="search-result" class="result"></section>
-        </main>
+                <button type="button" id="search-btn" onclick="searchDomain()">Search</button>
+            </form>
+        </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2025 TA-23B class work | All Rights Are Not Reserved</p>
-        </footer>
+    <footer>
+        <p>&copy; 2025 TA-23B class work | All Rights Are Not Reserved</p>
+    </footer>
 
-        <script>
-            function searchDomain() {
-                const domainName = document.getElementById("domain-name").value;
-                const result = document.getElementById("search-result");
-
-                if (domainName) {
-                    result.innerHTML = `Searching for domain <strong>${domainName}</strong>... <br> Available?: Yes`;
-                } else {
-                    result.innerHTML = "Please enter a domain name.";
-                }
+    <script>
+        function searchDomain() {
+            const domainName = document.getElementById('domain-name').value.trim();
+            if (domainName) {
+                // Store domain name in localStorage
+                localStorage.setItem('domainName', domainName);
+                // Redirect to registration page
+                window.location.href = 'register.html';
+            } else {
+                alert("Please enter a valid domain name.");
             }
-        </script>
-    </body>
-    </html>
+        }
+    </script>
+</body>
+</html>
