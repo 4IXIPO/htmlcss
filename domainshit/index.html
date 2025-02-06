@@ -9,6 +9,11 @@
 <body>
     <header>
         <div class="header-content">
+            <div class="steps">
+                <span class="step active">Welcome</span>
+                <span class="step">Choose Domain</span>
+                <span class="step">Registration</span>
+            </div>
             <h1>Welcome to DomainReg</h1>
             <p>Your one-stop solution for domain registration</p>
             <div class="header-buttons">
@@ -39,5 +44,17 @@
     <footer>
         <p>&copy; 2025 TA-23B class work | All Rights Are Not Reserved</p>
     </footer>
+
+    <script>
+        function setActiveStep() {
+            const currentPage = window.location.pathname;
+            const steps = document.querySelectorAll('.step');
+            steps.forEach(step => step.classList.remove('active'));
+            if (currentPage.includes('index.html')) {
+                steps[0].classList.add('active');
+            }
+        }
+        window.onload = setActiveStep;
+    </script>
 </body>
 </html>
