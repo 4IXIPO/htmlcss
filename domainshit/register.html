@@ -9,6 +9,17 @@
 <body>
     <header>
         <div class="header-content">
+            <div class="steps">
+                <div class="step completed">
+                    <span>1</span>
+                </div>
+                <div class="step completed">
+                    <span>2</span>
+                </div>
+                <div class="step active">
+                    <span>3</span>
+                </div>
+            </div>
             <h1>Register Your Domain</h1>
             <p>Fill out the form below to complete your domain registration</p>
         </div>
@@ -29,7 +40,7 @@
                 <label for="payment">Payment Information</label>
                 <input type="text" id="payment" placeholder="Enter payment details" required>
 
-                <a href="register2.html" class="btn secondary-btn">Complete Registration</a>
+                <button type="submit" class="btn secondary-btn">Complete Registration</button>
             </form>
         </section>
     </main>
@@ -39,10 +50,18 @@
     </footer>
 
     <script>
-        document.getElementById("registration-form").addEventListener("submit", function(e) {
-            e.preventDefault();
-            alert("Registration Complete!");
-        });
+        // When the page loads, retrieve the domain name from localStorage and populate the field
+        window.onload = function() {
+            const domainName = localStorage.getItem('domainName');
+            if (domainName) {
+                document.getElementById('domain').value = domainName;
+            }
+
+            document.getElementById("registration-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                alert("Registration Complete! (This is a simulation)");
+            });
+        };
     </script>
 </body>
 </html>
