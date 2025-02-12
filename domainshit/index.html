@@ -5,38 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domain Registration</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <div class="header-content">
-            <div class="steps">
-                <span class="step active">Welcome</span>
-                <span class="step">Choose Domain</span>
-                <span class="step">Registration</span>
+        <div class="container">
+            <!-- Step indicators -->
+            <div class="steps-container">
+                <div class="step active">
+                    <span>Home</span>
+                </div>
+                <div class="step">
+                    <span>Search</span>
+                </div>
+                <div class="step">
+                    <span>Registration</span>
+                </div>
             </div>
+
             <h1>Welcome to DomainReg</h1>
             <p>Your one-stop solution for domain registration</p>
             <div class="header-buttons">
-                <a href="search.html" class="btn primary-btn">Search Domains</a>
-                <a href="register.html" class="btn secondary-btn">Register Domain</a>
+                <a href="search.html" class="btn btn-light">Search Domains</a>
+                <a href="register.html" class="btn btn-success">Register Domain</a>
             </div>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn rickroll-btn">Click Here</a>
         </div>
     </header>
 
     <main>
+        <!-- Main Content -->
         <section class="features">
-            <div class="feature-item">
-                <h2>Easy Search</h2>
-                <p>Search for the perfect domain name with ease.</p>
-            </div>
-            <div class="feature-item">
-                <h2>Secure Payments</h2>
-                <p>We ensure your payments are safe and secure.</p>
-            </div>
-            <div class="feature-item">
-                <h2>24/7 Support</h2>
-                <p>Get help whenever you need it, day or night.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <h2>Easy Search</h2>
+                        <p>Search for the perfect domain name with ease.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h2>Secure Payments</h2>
+                        <p>We ensure your payments are safe and secure.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h2>24/7 Support</h2>
+                        <p>Get help whenever you need it, day or night.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -45,16 +61,10 @@
         <p>&copy; 2025 TA-23B class work | All Rights Are Not Reserved</p>
     </footer>
 
-    <script>
-        function setActiveStep() {
-            const currentPage = window.location.pathname;
-            const steps = document.querySelectorAll('.step');
-            steps.forEach(step => step.classList.remove('active'));
-            if (currentPage.includes('index.html')) {
-                steps[0].classList.add('active');
-            }
-        }
-        window.onload = setActiveStep;
-    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

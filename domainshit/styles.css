@@ -1,51 +1,63 @@
+/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body and fonts */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    padding-top: 100px; /* Make space for the fixed steps */
 }
 
+/* Header Section */
 header {
     background: url('background.jpg') no-repeat center center/cover;
     background-size: cover;
     background-attachment: fixed;
     color: white;
     text-align: center;
-    padding: 120px 20px;
-    margin-bottom: 40px;
+    padding: 50px 20px;
+    position: relative;
+    z-index: 1;
 }
 
-header .header-content h1 {
+header h1 {
     font-size: 3.5em;
     margin-bottom: 15px;
 }
 
-header .header-content p {
+header p {
     font-size: 1.5em;
     margin-top: 20px; 
 }
 
-.steps {
+/* Step indicators */
+.steps-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    margin-top: -40px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight background to make steps readable */
+    z-index: 2; /* To make sure the steps are above the text */
+    padding: 10px 0;
 }
 
 .step {
     font-size: 1.2em;
-    margin: 0 15px;
-    padding: 8px 15px;
+    padding: 10px 20px;
     background-color: #e0e0e0;
-    border-radius: 50%;
     color: #333;
     cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
@@ -59,14 +71,7 @@ header .header-content p {
     color: white;
 }
 
-.step:active {
-    background-color: #2980b9;
-}
-
-.header-buttons {
-    margin-top: 20px; 
-}
-
+/* Buttons */
 .header-buttons .btn {
     margin: 10px;
     padding: 15px 30px;
@@ -74,8 +79,6 @@ header .header-content p {
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-    width: auto; 
-    box-sizing: content-box; 
 }
 
 .primary-btn {
@@ -96,32 +99,18 @@ header .header-content p {
     background-color: #27ae60;
 }
 
-.rickroll-btn {
-    background-color: #e74c3c;
-    color: white;
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.rickroll-btn:hover {
-    background-color: #c0392b;
-}
-
+/* Main content and layout */
 .features {
     display: flex;
     justify-content: space-around;
     padding: 50px 20px;
     background-color: #ecf0f1;
-    margin-bottom: 40px;
+    margin-top: 120px;
 }
 
 .feature-item {
     text-align: center;
     width: 30%;
-    margin-bottom: 20px;
 }
 
 .feature-item h2 {
@@ -133,222 +122,6 @@ header .header-content p {
 .feature-item p {
     font-size: 1.2em;
     margin-bottom: 15px;
-}
-
-.search-form {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-
-.search-form input {
-    padding: 12px;
-    width: 60%;
-    max-width: 400px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-}
-
-.search-form button {
-    padding: 14px 30px;
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
-    border: none;
-}
-
-.search-form button:hover {
-    background-color: #2980b9;
-}
-
-body, h1, h2, p, label, input, button {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.steps {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.step {
-    width: 50px;
-    height: 50px;
-    margin: 0 20px; 
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #4CAF50;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
-
-.step.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.step.completed {
-    background-color: #2196F3;
-    color: white;
-}
-
-.step-text-container {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.step-text-container .step {
-    margin: 0;
-    display: block;
-}
-
-.step-text-container span {
-    display: block;
-    margin-top: 5px;
-    font-size: 14px;
-    color: #333;
-}
-
-.registration-form, .domain-form {
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.registration-form, .domain-form {
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-main {
-    padding: 20px;
-}
-
-.registration-form,
-.registration-complete {
-    background-color: white;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.registration-form label {
-    font-size: 1.1em;
-    margin: 10px 0 5px;
-    display: block;
-}
-
-.registration-form input,
-.registration-form select,
-.registration-form button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-.registration-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.registration-form button:hover {
-    background-color: #45a049;
-}
-
-.registration-complete input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.registration-complete button {
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.registration-complete button:hover {
-    background-color: #1e88e5;
 }
 
 /* Footer Styling */

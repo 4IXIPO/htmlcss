@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Domain</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <div class="steps">
+        <div class="container">
+            <div class="steps-container">
                 <div class="step completed">
                     <span>1</span>
                 </div>
@@ -26,21 +27,28 @@
     </header>
 
     <main>
-        <section class="registration-form">
+        <section class="container">
             <form id="registration-form">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your full name" required>
+                <input type="text" id="name" placeholder="Enter your full name" class="form-control" required>
 
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="email" id="email" placeholder="Enter your email" class="form-control" required>
 
                 <label for="domain">Domain Name</label>
-                <input type="text" id="domain" placeholder="Enter your domain name" required>
+                <input type="text" id="domain" placeholder="Enter your domain name" class="form-control" required>
+
+                <label for="extension">Domain Extension</label>
+                <select id="extension" class="form-control" required>
+                    <option value=".com">.com</option>
+                    <option value=".ee">.ee</option>
+                    <option value=".org">.org</option>
+                </select>
 
                 <label for="payment">Payment Information</label>
-                <input type="text" id="payment" placeholder="Enter payment details" required>
+                <input type="text" id="payment" placeholder="Enter payment details" class="form-control" required>
 
-                <button type="submit" class="btn secondary-btn">Complete Registration</button>
+                <button type="submit" class="btn btn-success mt-3">Complete Registration</button>
             </form>
         </section>
     </main>
