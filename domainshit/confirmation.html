@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Thank you for your purchase!</h1>
+            <p>Your domain registration has been successfully completed. A confirmation email has been sent to your email address.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Confirmation Message Section -->
+        <section class="confirmation-message">
+            <div class="container text-center">
+                <h2>Confirmation Details</h2>
+                <p>We have sent a receipt to the email address you provided during registration.</p>
+                <p>If you don't see the email in your inbox, please check your spam folder.</p>
+
+                <div class="email-info">
+                    <p><strong>Email Address:</strong> <span id="user-email">example@example.com</span></p>
+                </div>
+
+                <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TA-23B class work | All Rights Are Not Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript to retrieve the email from localStorage
+        window.onload = function() {
+            const userEmail = localStorage.getItem('userEmail'); // Retrieve email from localStorage
+            if (userEmail) {
+                document.getElementById('user-email').textContent = userEmail;
+            }
+        };
+    </script>
+</body>
+</html>

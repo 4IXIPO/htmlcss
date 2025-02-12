@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Domain</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="steps-container">
+                <div class="step completed">
+                    <span>1</span>
+                </div>
+                <div class="step active">
+                    <span>2</span>
+                </div>
+                <div class="step">
+                    <span>3</span>
+                </div>
+            </div>
+            <h1>Choose Your Domain</h1>
+            <p>Select a domain name and check its availability.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <form id="domain-form">
+                <label for="domain-name">Domain Name</label>
+                <input type="text" id="domain-name" class="form-control" placeholder="Enter domain name" required>
+
+                <button type="button" id="search-btn" class="btn btn-success mt-3" onclick="searchDomain()">Search</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TA-23B class work | All Rights Are Not Reserved</p>
+    </footer>
+
+    <script>
+        function searchDomain() {
+            const domainName = document.getElementById('domain-name').value.trim();
+            if (domainName) {
+                localStorage.setItem('domainName', domainName);
+                window.location.href = 'register.html';
+            } else {
+                alert("Please enter a valid domain name.");
+            }
+        }
+    </script>
+</body>
+</html>
