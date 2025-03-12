@@ -1,0 +1,81 @@
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #1b1b31;
+}
+
+.calm-header {
+    background-color: hsl(240, 30%, 21%);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    width: calc(100% - 30px);
+    max-width: 830px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.calm-header h1 {
+    font-size: 36px;
+    margin: 0;
+    font-weight: normal;
+    color: hsl(0, 0%, 100%);
+}
+
+.calm-header p {
+    font-size: 20px;
+    margin: 10px 0 0;
+    color: hsl(0, 0%, 100%);
+}
+
+.main-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 0;
+    color: hsl(240, 30%, 21%);
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: hsl(240, 30%, 21%);
+}
+.bridge-section {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    width: calc(100% - 40px);
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bridge-section h2 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: normal;
+    color: #444;
+}
+
+.bridge-section p {
+    font-size: 18px;
+    margin: 10px 0 0;
+    color: #666;
+}
